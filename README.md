@@ -1,71 +1,37 @@
-Yii Web Programming Framework
+Yii Web Programming Framework - Assement with Yii 1.1
 =============================
 
-Thank you for choosing Yii - a high-performance component-based PHP framework.
-
-[![Build Status](https://github.com/yiisoft/yii/workflows/build/badge.svg)](https://github.com/yiisoft/yii/actions)
-
-> Note that Yii 1.1 [has reached end of life](https://www.yiiframework.com/news/90/update-on-yii-1-1-support-and-end-of-life/)
-  and will only receive necessary security fixes and fixes to adjust the code for compatibility with PHP 7 and 8 if they do not cause breaking changes.
-  This allows you to keep your servers PHP version up to date in the environments where old Yii 1.1 applications are hosted and stay within the [version ranges supported by the PHP team](https://php.net/supported-versions.php).
-> 
-> Currently tested and supported [up to PHP 8.2](https://github.com/yiisoft/yii/blob/master/.github/workflows/build.yml#L34).
+> Get the repo from https://github.com/iftkharali/yii-backend-assignment
 
 INSTALLATION
 ------------
 
-Please make sure the release file is unpacked under a Web-accessible
-directory. You shall see the following files and directories:
+Extract the repo inside any of your folders, and navigate to "yii-assignment"  folder, as this is the original project that contains the task
 
-      demos/               demos
-      framework/           framework source files
-      requirements/        requirement checker
-      CHANGELOG            describing changes in every Yii release
-      LICENSE              license of Yii
-      README               this file
-      UPGRADE              upgrading instructions
-
-
-REQUIREMENTS
-------------
-
-The minimum requirement by Yii is that your Web server supports
-PHP 5.1.0 or above. Yii has been tested with Apache HTTP server
-on Windows and Linux operating systems.
-
-Please access the following URL to check if your Web server reaches
-the requirements by Yii, assuming "YiiPath" is where Yii is installed:
-
-      http://hostname/YiiPath/requirements/index.php
-
-
-QUICK START
------------
-
-Yii comes with a command line tool called "yiic" that can create
-a skeleton Yii application for you to start with.
-
-On command line, type in the following commands:
-
-        $ cd YiiPath/framework                (Linux)
-        cd YiiPath\framework                  (Windows)
-
-        $ ./yiic webapp ../testdrive          (Linux)
-        yiic webapp ..\testdrive              (Windows)
-
-The new Yii application will be created at "YiiPath/testdrive".
-You can access it with the following URL:
-
-        http://hostname/YiiPath/testdrive/index.php
-
-
-WHAT'S NEXT
------------
-
-Please visit the project website for tutorials, class reference
-and join discussions with other Yii users.
+- Run migration by running this command "php protected/php yiic migrate"
+- After running the migration run the by running this command "php -S localhost:8080"
+- Your application would start serving successfully,  then just signup with an account, as the new users are not-varfiied, so they can not 
+   perform any operations on blog posts
+- Change the user varfiied status manuely and check the blog posting, editing, updating, with "ajax based real time like functionality". 
+- Email existed is also implemented on the signup via ajax real time without refresh 
 
 
 
-The Yii Developer Team
-https://www.yiiframework.com
+Functionalities:
+-----------------
+
+- User signup and login with valid token (token is being saved in the database)
+- Email duplication check is implemented via ajax to update real time if a user is adding the same email for account creation 
+- A varified user can perform CURD operations on the post.
+- A user can edit, update, or delete only its own blog posts, he/she would not have the access to delete any others post, but he can read and like 
+  others posts. 
+- Post like functionality is also done via ajax and with likes count implementation on real time. 
+- Designing is implemented by Bootstrap everywhere.
+
+
+Thank you
+
+
+
+
+
